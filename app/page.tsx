@@ -4,6 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import raw from "./questions.json"; // <-- the link between page.tsx and the JSON file
+import GradientBackground from "@/components/GradientBackground";
 
 /* ============================ Types ============================ */
 interface BankItem { q: string; answer: string; wrong: string[]; topic?: string }
@@ -334,24 +335,6 @@ export default function BrainBurst() {
   const classKeys = Object.keys(DATA.classes);
   const subjectCount = new Set(Object.values(DATA.classes).flat()).size;
 
-  // floating particles (created after mount so server and browser agree)
-  useEffect(() => {
-    setParticles(
-      Array.from({ length: 28 }, (_, i) => ({
-        left: Math.random() * 100,
-        size: 4 + Math.random() * 8,
-        color: PARTICLE_COLORS[i % 4],
-        dur: 8 + Math.random() * 12,
-        delay: Math.random() * 15,
-      }))
-    );
-    // remembered name: skip the welcome screen
-    try {
-      const saved = localStorage.getItem("bb_name");
-      if (saved) { setName(saved); setScreen("home"); }
-    } catch { /* ignore */ }
-  }, []);
-
   /* ---------- welcome ---------- */
   const enter = () => {
     const n = nameInput.trim();
@@ -449,15 +432,7 @@ export default function BrainBurst() {
     <div className="bb">
       <style>{CSS}</style>
 
-      <div className="orb" style={{ background: "#8b5cf6", width: 300, height: 300, top: "5%", left: "5%" }} />
-      <div className="orb" style={{ background: "#ec4899", width: 340, height: 340, top: "55%", right: "5%", animationDelay: "-3s" }} />
-      <div className="orb" style={{ background: "#06b6d4", width: 240, height: 240, bottom: "5%", left: "15%", animationDelay: "-6s" }} />
-      <div className="particles">
-        {particles.map((p, i) => (
-          <div key={i} className="dot" style={{ left: `${p.left}%`, width: p.size, height: p.size, background: p.color, animationDuration: `${p.dur}s`, animationDelay: `-${p.delay}s` }} />
-        ))}
-      </div>
-      {flash && <div className="flash" />}
+      <GradientBackground />
 
       {/* ---------------- Screen 1: name ---------------- */}
       {screen === "welcome" && (
