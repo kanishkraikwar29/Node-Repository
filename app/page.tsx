@@ -437,11 +437,6 @@ export default function BrainBurst() {
       {/* ---------------- Screen 1: name ---------------- */}
       {screen === "welcome" && (
         <section className={`screen welcome${leaving ? " leave" : ""}`}>
-          <div className="rings">
-            <div className="ring" style={{ borderColor: "#8b5cf6" }} />
-            <div className="ring" style={{ borderColor: "#ec4899", animationDelay: "1.3s" }} />
-            <div className="ring" style={{ borderColor: "#f59e0b", animationDelay: "2.6s" }} />
-          </div>
           <div className="logo">
             {"BrainBurst".split("").map((ch, i) => (
               <span key={i} style={{ animationDelay: `${i * 0.09}s, ${i * 0.09 + 0.9}s` }}>{ch}</span>
