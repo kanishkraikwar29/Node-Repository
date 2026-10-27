@@ -816,7 +816,7 @@ export default function BrainBurst() {
                 style={{
                   animationDelay: `${index * 0.09}s, ${index * 0.09 + 0.9}s`,
                   background:
-                    "linear-gradient(180deg,#fff,#ec4899 55%,#8b5cf6)",
+                    "linear-gradient(180deg,#fff,#575555 55%,#575555)",
                   WebkitBackgroundClip: "text",
                   backgroundClip: "text",
                   color: "transparent",
@@ -887,7 +887,7 @@ export default function BrainBurst() {
             </div>
             <div className="flex items-center gap-2 rounded-full border border-[#2e2e42] bg-[#12121c] py-1.5 pl-4 pr-2 text-sm">
               <span>{name}</span>
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-pink-500 font-bold">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-neutral-500 to-pink-500 font-bold">
                 {name.charAt(0)}
               </span>
               <button
