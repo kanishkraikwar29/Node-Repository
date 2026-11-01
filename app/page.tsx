@@ -857,10 +857,10 @@ export default function BrainBurst() {
             <button
               type="button"
               onClick={enter}
-              className="group relative flex h-[3.4em] w-full items-center justify-center overflow-hidden rounded-[0.9em] border-0 bg-[#a370f0] py-[0.35em] pl-[1.2em] pr-[3.3em] text-[17px] font-medium tracking-[0.05em] text-white shadow-[inset_0_0_1.6em_-0.6em_#714da6] transition-transform active:scale-[0.98]"
+              className="group relative flex h-[3.4em] w-full items-center justify-center overflow-hidden rounded-[0.9em] border-0 bg-neutral-700 py-[0.35em] pl-[1.2em] pr-[3.3em] text-[17px] font-medium tracking-[0.05em] text-white shadow-[inset_0_0_1.6em_-0.6em_#ffffff] transition-transform active:scale-[0.98]"
             >
               Let&apos;s Burst
-              <span className="absolute right-[0.3em] flex h-[2.8em] w-[2.8em] items-center justify-center rounded-[0.7em] bg-white shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] transition-all duration-300 group-hover:w-[calc(100%-0.6em)]">
+              <span className="absolute right-[0.3em] flex h-[2.8em] w-[2.8em] items-center justify-center rounded-[0.7em] bg-white  transition-all duration-300 group-hover:w-[calc(100%-0.6em)]">
                 <svg
                   className="h-[1.1em] w-[1.1em] shrink-0 text-[#7b52b9] transition-transform duration-300 group-hover:translate-x-[0.1em]"
                   viewBox="0 0 24 24"
