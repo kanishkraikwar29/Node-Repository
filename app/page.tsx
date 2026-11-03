@@ -547,11 +547,11 @@ function assemble(
 
 const BADGE_COLORS = ["#8b5cf6", "#06b6d4", "#ec4899", "#f59e0b"] as const;
 const inputClass =
-  "w-full rounded-2xl border-[1.5px] border-[#3a3a52] bg-[#101018] px-4 py-4 text-[17px] font-medium text-white outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-500/25 placeholder:text-[#77778a]";
+  "w-full rounded-2xl border-[1.5px] border-neutral-700 bg-neutral-800 px-4 py-4 text-[17px] font-medium text-white outline-none transition focus:border-neutral-500 placeholder:text-neutral-500";
 const buttonClass =
   "mt-4 w-full rounded-2xl bg-[linear-gradient(90deg,#8b5cf6,#ec4899,#f59e0b)] bg-[length:200%_200%] px-4 py-4 text-base font-semibold tracking-wide text-white shadow-[0_0_24px_rgba(139,92,246,.22)] transition hover:-translate-y-0.5 hover:scale-[1.01] active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-40";
 const panelClass =
-  "rounded-[22px] border border-[#2e2e42] bg-[rgba(18,18,28,.84)] p-6 shadow-[0_0_28px_rgba(139,92,246,.12)] backdrop-blur-xl";
+  "rounded-[22px] border border-neutral-800 bg-neutral-900/20 p-6 backdrop-blur-xl";
 const muted = "text-[#a1a1b5]";
 
 function CountUp({ end }: { end: number }) {
@@ -826,15 +826,15 @@ export default function BrainBurst() {
               </span>
             ))}
           </h1>
-          <p className="mb-9 mt-4 text-lg text-[#a1a1b5] opacity-0 [animation:bb-fade_1s_ease_1.3s_forwards]">
+          <p className="mb-9 mt-4 text-lg text-neutral-500 opacity-0 [animation:bb-fade_1s_ease_1.3s_forwards]">
             {DATA.tagline}
           </p>
           <div
-            className={`${panelClass} w-full max-w-[420px] flex flex-col gap-8 opacity-0 [animation:bb-up_.8s_ease_1.6s_forwards,bb-glow_4s_ease-in-out_2.4s_infinite]`}
+            className={`${panelClass} w-full max-w-[420px] flex flex-col gap-8 opacity-0 [animation:bb-up_.8s_ease_1.6s_forwards]`}
           >
             <label
               htmlFor="bbname"
-              className="mb-2 block text-left text-xs font-semibold uppercase tracking-[2px] text-violet-300"
+              className="mb-2 block text-left text-xs font-semibold uppercase tracking-[2px] text-neutral-500"
             >
               What&apos;s your name?
             </label>
@@ -862,7 +862,7 @@ export default function BrainBurst() {
               Let&apos;s Burst
               <span className="absolute right-[0.3em] flex h-[2.8em] w-[2.8em] items-center justify-center rounded-[0.7em] bg-white  transition-all duration-300 group-hover:w-[calc(100%-0.6em)]">
                 <svg
-                  className="h-[1.1em] w-[1.1em] shrink-0 text-[#7b52b9] transition-transform duration-300 group-hover:translate-x-[0.1em]"
+                  className="h-[1.1em] w-[1.1em] shrink-0 text-neutral-500 transition-transform duration-300 group-hover:translate-x-[0.1em]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
